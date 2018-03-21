@@ -1,0 +1,11 @@
+package uk.ac.ox.thomasburton.datastorage;
+
+import java.util.List;
+
+public interface DataStorage {
+
+	
+	public List<Byte[]> getData(String decryptionKey);
+	
+	
+}

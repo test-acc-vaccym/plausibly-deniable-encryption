@@ -1,0 +1,16 @@
+package uk.ac.ox.thomasburton.utilities;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BigByteArrayTest {
+
+	@Test
+	public void InitaliseBigByteArrayTest() {
+		
+		BigByteArray b = new BigByteArray();
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package uk.ac.ox.thomasburton.utilities;
+
+public class BigByteArray {
+
+	private byte[][] bytes = new byte[1024][1];
+	private long length = 0;
+	
+}

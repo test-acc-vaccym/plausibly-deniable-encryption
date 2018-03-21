@@ -1,0 +1,18 @@
+package uk.ac.ox.thomasburton.utilities;
+
+public class BigByteArray {
+
+	private static long MAX_SIZE = Integer.MAX_VALUE * 200;
+	
+	private byte[][] bytes = new byte[1024][1];
+	private long length = 0;
+	
+	public byte get( long index ){
+		
+	}
+	
+	public void set( long index, byte val){
+		
+	}
+	
+}

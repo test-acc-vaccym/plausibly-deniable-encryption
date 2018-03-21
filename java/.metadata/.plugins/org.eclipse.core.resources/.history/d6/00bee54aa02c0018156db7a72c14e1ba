@@ -1,0 +1,19 @@
+package uk.ac.ox.thomasburton.datastorage;
+
+import java.util.List;
+
+public interface DataStorage {
+
+	
+	public List<Byte[]> getData(String decryptionKey);
+	
+	public void setData(String encryptionKey, List<Byte[]> data);
+	
+	
+	public boolean readFile( String filename );
+	public boolean WriteFile( String filename );
+	public boolean setRaw( byte[] raw );
+	public boolean setRaw( List<Byte[]> raw );
+	public boolean clear();
+	
+}

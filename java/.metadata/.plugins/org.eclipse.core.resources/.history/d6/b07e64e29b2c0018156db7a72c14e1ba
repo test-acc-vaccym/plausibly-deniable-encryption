@@ -1,0 +1,9 @@
+package uk.ac.ox.thomasburton.datastorage;
+
+public interface DataStorage {
+
+	
+	public byte[] getData(String decryptionKey);
+	
+	
+}

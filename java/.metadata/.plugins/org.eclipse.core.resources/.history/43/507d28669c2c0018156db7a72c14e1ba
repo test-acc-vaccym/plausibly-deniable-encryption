@@ -1,0 +1,31 @@
+package uk.ac.ox.thomasburton.utilities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BigByteArray {
+
+	private static long MAX_SIZE = Integer.MAX_VALUE * 1024;
+	private static int INITIAL_X_SIZE = 1024;
+	private static int INITIAL_Y_SIZE = 1;
+	
+	private byte[][] bytes = new byte[INITIAL_X_SIZE][INITIAL_Y_SIZE];
+	private long currentLength = 0;
+	
+	public byte get( long index ){
+		
+		System.out.println(bytes[0].length);
+		
+		
+		return 0;
+	}
+	
+	public void set( long index, byte val){
+		
+	}
+	
+	public void add( byte val ){
+		
+	}
+	
+}

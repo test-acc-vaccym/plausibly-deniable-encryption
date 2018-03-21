@@ -5,17 +5,34 @@ import java.util.List;
 
 import uk.ac.ox.thomasburton.utilities.ByteArrayUtilities;
 
-public class PlausiblyDeniableStorage implements DataStorage{
+public class PlausiblyDeniableStorage implements BlockStorage{
 
+	/*
+	 * 		The block storage uses an array of encrypted blocks of size 512 bytes.
+	 * 
+	 * 		Block format:
+	 * 
+	 * 			   Bytes	 Description					 Encrypted
+	 * 			  0 - 15     AES IV						     No
+	 * 			 16 - 19     Decrypt Validation [0,0,0,0]    Yes
+	 * 			20 - 511     Data (Length: 492)			     Yes
+	 */
 	
+	
+	/**
+	 * 	A List of raw encrypted blocks. An encrypted block is 512 bytes long.
+	 */
 	private List<Byte[]> raw = null;
+	
+	
 	
 	public PlausiblyDeniableStorage(){
 		
 	}
 	
+	
 	@Override
-	public List<Byte[]> getData(String decryptionKey) {
+	public List<Byte[]> getBlocks(String decryptionKey) {
 		
 		if( raw != null){
 			
@@ -28,15 +45,22 @@ public class PlausiblyDeniableStorage implements DataStorage{
 			 *  
 			 */
 			
+			List<Byte[]> validBlocks = new ArrayList<Byte[]>();
 			
-			return raw;
+			for( int i = 0 ; i < raw.size(); i++ ){
+				
+				validBlocks.add(raw.get(i));
+				
+			}
+			
+			return validBlocks;
 			
 		} 
 		return null;
 	}
 
 	@Override
-	public void setData(String encryptionKey, List<Byte[]> data) {
+	public void setBlock(String encryptionKey, List<Byte[]> data) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -71,6 +95,27 @@ public class PlausiblyDeniableStorage implements DataStorage{
 	public boolean clear() {
 		raw = new ArrayList<Byte[]>();
 		return true;
+	}
+
+
+	@Override
+	public void addBlock(String encryptionKey, byte[] data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void addBlock(String encryptionKey, byte[] data, int index) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public byte[] getBlock(String decryptionKey, int index) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="BigByteArrayTest" project="Plausibly Deniable Data Storage" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="uk.ac.ox.thomasburton.utilities.BigByteArrayTest" time="0.001">
-    <testcase name="InitaliseBigByteArrayTest" classname="uk.ac.ox.thomasburton.utilities.BigByteArrayTest" time="0.001"/>
-  </testsuite>
-</testrun>

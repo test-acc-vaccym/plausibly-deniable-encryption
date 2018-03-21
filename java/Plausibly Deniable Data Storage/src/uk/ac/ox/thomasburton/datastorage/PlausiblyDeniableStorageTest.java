@@ -13,13 +13,13 @@ public class PlausiblyDeniableStorageTest {
 		
 		byte[] data = {0,1,2,3};
 		
-		DataStorage ds = new PlausiblyDeniableStorage();
+		BlockStorage ds = new PlausiblyDeniableStorage();
 		ds.clear();
 		ds.setRaw(data);
 		
 		
 		for( int i = 0 ; i < data.length; i++ ){
-			assertTrue( ds.getData("").get(0)[i] == data[i]);
+			assertTrue( ds.getBlocks("").get(0)[i] == data[i]);
 			
 			System.out.println(data[i]);
 			
